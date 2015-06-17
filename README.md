@@ -29,19 +29,20 @@ API tools and documentation
 ##Map
     http://www.coincap.io/map
 ###responce
-    An array of Objects
+    An Array of Objects
     [{"name":"Counterparty","symbol":"XCP","aliases":["unknown","setme"]},...,...,...]
 
 ##Front
     http://www.coincap.io/front
 ###   responce
-    An array of Objects
+    An Array of Objects
     [{"position24":"1","position":"1","short":"BTC","long":"Bitcoin","time":1434562273127,"price":"251.42000000","perc":"5.98","volume":"48384700","usdVolume":"48384700","cap24hrChange":"5.98","mktcap":3590824438.5,"supply":"14282175","published":false},...,...,]
 
 
 ##Globals
     http://www.coincap.io/global
 ###   responce
+    JSON object
     {"btcPrice":250.12,"btcCap":3572257611,"altCap":630448767,"dom":18}
 
 ##Page call
@@ -50,6 +51,7 @@ API tools and documentation
     to view a list of correct symbols/names view the map call 
 
 ###   responce
+    JSON object
     {"btcPrice":250.21,"btcCap":3573543006.75,"altCap":628974097,"dom":18,"short":"BTC","long":"Bitcoin","homeURL":"https://www.reddit.com/r/Bitcoin","explorerURL":"","twitter":"","discissionURL":"","mineable":true,"premined":false,"preminedSig":false,"position24":"1","position":"1","time":1434562499433,"price":[...*Array of Arrays (chart data)*],"perc":"5.98","volume":"48384700","usdVolume":"48384700","cap24hrChange":"5.98","mktcap":3573543006.75,"supply":"14282175","published":false,"usdPrice":250.21,"market_cap":[...*Array of Arrays (chart data)*]}
 
 
@@ -69,4 +71,5 @@ API tools and documentation
     /history/:coin will return all data
 
 ###   responce
+    JSON object
     {"marekt_cap":[*Array of Arrays (chart data)*],"price":[*Array of Arrays (chart data)*]}
