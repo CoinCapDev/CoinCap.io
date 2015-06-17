@@ -27,7 +27,7 @@ You can find the 0.9.16 client on github
 
 [Sample code attached](https://github.com/CoinCapDev/CoinCap/blob/master/subscribe.js)
 
-### responces
+### responses
 ```
 // Example Trade message
 {
