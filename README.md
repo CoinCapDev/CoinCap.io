@@ -1,4 +1,4 @@
-# CoinCap
+# CoinCap.io
 API tools and documentation
 
 
