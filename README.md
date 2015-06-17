@@ -17,6 +17,53 @@ API tools and documentation
 * /history/180day/:coin returns 180 days of price history for a given coin
 * /history/365day/:coin returns a years of price history for a given coin
 
+## Socket API
+    http://socket.coincap.io
+
+To connect to CoinCap WebSockets you must use socket.io-client 0.9.16 or another
+websocket client compatiable with that version of Socket.io
+You can find the 0.9.16 client on github
+[https://github.com/automattic/socket.io-client/tree/0.9](https://github.com/automattic/socket.io-client/tree/0.9)
+
+Sample code attached
+
+### responces
+```
+// Example Trade message
+{
+    "message": {
+        "coin": "BTC",
+        "msg": {
+            "position24": "1",
+            "position": "1",
+            "short": "BTC",
+            "long": "Bitcoin",
+            "time": 1434566319464,
+            "price": 251.55,
+            "perc": "1.89",
+            "volume": "46021300",
+            "usdVolume": "46021300",
+            "cap24hrChange": "1.89",
+            "mktcap": 3593077312.5,
+            "supply": "14283750",
+            "published": false
+        }
+    }
+}
+
+//Example Global Message
+{
+    "message": {
+        "btcPrice": "251.445",
+        "btcCap": "3591577518.75",
+        "altCap": 657169699,
+        "dom": 85,
+        "bitnodesCount": "6216"
+    }
+}
+```
+
+
 
 ##Coins Call
     http://www.coincap.io/coins
