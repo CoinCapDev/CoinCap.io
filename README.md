@@ -5,8 +5,11 @@ API tools and documentation
 ##Main Map
 
 * /coins  Array of all supported coins
+* /coins/xcp Array of all supported XCP assets
+* /coins/xcp/all Array all XCP assets known
 * /map  JSON object of Coin symbols/names and known aliases
 * /front Front Page Data of current coin stats
+* /front/xcp Front Page Data of just XCP assets
 * /global Global data
 * /page/:coin  must seach by symbol ex BTC returns all data on a speffic coin
 * /history/:coin Returns all history on a coin
