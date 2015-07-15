@@ -11,7 +11,7 @@ API tools and documentation
 * /front Front Page Data of current coin stats
 * /front/xcp Front Page Data of just XCP assets
 * /global Global data
-* /page/:coin  must seach by symbol ex BTC returns all data on a speffic coin
+* /page/:coin  must seach by symbol (e.g., BTC); returns all data on a specific coin
 * /history/:coin Returns all history on a coin
 * /history/1day/:coin returns 1 day of price history for a given coin
 * /history/7day/:coin returns 7 days of price history for a given coin
@@ -24,7 +24,7 @@ API tools and documentation
     http://socket.coincap.io
 
 To connect to CoinCap WebSockets you must use socket.io-client 0.9.16 or another
-websocket client compatiable with that version of Socket.io
+WebSocket client compatiable with that version of Socket.io
 You can find the 0.9.16 client on github
 [https://github.com/automattic/socket.io-client/tree/0.9](https://github.com/automattic/socket.io-client/tree/0.9)
 
