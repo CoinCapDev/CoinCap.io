@@ -3,7 +3,7 @@
 <script type="text/javascript">
     var socket = io.connect('http://socket.coincap.io');
 
-    socket.on('trade', function (tradeMsg) {
+    socket.on('trades', function (tradeMsg) {
         console.log(tradeMsg);
     })
 
