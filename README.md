@@ -1,6 +1,7 @@
 # CoinCap.io
 API tools and documentation
 
+* [Command line tools](https://github.com/sebs/capcoin)
 
 ##Main Map
 
