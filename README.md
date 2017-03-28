@@ -2,7 +2,7 @@
 API tools and documentation
 
 
-##Main Map
+## Main Map
 
 * /coins  Array of all supported coins
 * /coins/xcp Array of all supported XCP assets
@@ -68,7 +68,7 @@ You can find the 0.9.16 client on github
 
 
 
-##Coins Call
+## Coins Call
     http://www.coincap.io/coins
 
 ###   response
@@ -78,14 +78,14 @@ You can find the 0.9.16 client on github
 
 
 
-##Map
+## Map
     http://www.coincap.io/map
 ### response
 ```JSON
 [{"name":"Counterparty","symbol":"XCP","aliases":["unknown","setme"]},...,...,...]
 ```
 
-##Front
+## Front
     http://www.coincap.io/front
 ###   response
 ```JSON
@@ -93,14 +93,14 @@ You can find the 0.9.16 client on github
 ```
 
 
-##Globals
+## Globals
     http://www.coincap.io/global
 ###   response
 ```JSON
 {"btcPrice":250.12,"btcCap":3572257611,"altCap":630448767,"dom":18}
 ```
 
-##Page call
+## Page call
     http://www.coincap.io/page/:coin
     Coin must be the coin symbole. ie Bitcoin is BTC
     to view a list of correct symbols/names view the map call 
@@ -111,7 +111,7 @@ You can find the 0.9.16 client on github
 ```
 
 
-##History
+## History
     http://www.coincap.io/history/*Timeframe*/BTC
     
     Timeframes supported
