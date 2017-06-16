@@ -8,18 +8,18 @@ API tools and documentation
 * /coins  Array of all supported coins
 * /coins/xcp Array of all supported XCP assets
 * /coins/xcp/all Array all XCP assets known
-* /map  JSON object of Coin symbols/names and known aliases
+* /map JSON object of Coin symbols/names and known aliases
 * /front Front Page Data of current coin stats
 * /front/xcp Front Page Data of just XCP assets
 * /global Global data
-* /page/:coin  must seach by symbol ex BTC returns all data on a speffic coin
+* /page/:coin Must seach by symbol (eg BTC) - Returns all data on a specific coin
 * /history/:coin Returns all history on a coin
-* /history/1day/:coin returns 1 day of price history for a given coin
-* /history/7day/:coin returns 7 days of price history for a given coin
-* /history/30day/:coin returns 30 days day of price history for a given coin
-* /history/90day/:coin returns 90 days of price history for a given coin
-* /history/180day/:coin returns 180 days of price history for a given coin
-* /history/365day/:coin returns a years of price history for a given coin
+* /history/1day/:coin Returns 1 day of price history for a given coin
+* /history/7day/:coin Returns 7 days of price history for a given coin
+* /history/30day/:coin Returns 30 days day of price history for a given coin
+* /history/90day/:coin Returns 90 days of price history for a given coin
+* /history/180day/:coin Returns 180 days of price history for a given coin
+* /history/365day/:coin Returns a years of price history for a given coin
 
 ## Socket API
     http://socket.coincap.io
