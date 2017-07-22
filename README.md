@@ -12,7 +12,7 @@ API tools and documentation
 * /front Front Page Data of current coin stats
 * /front/xcp Front Page Data of just XCP assets
 * /global Global data
-* /page/:coin  must seach by symbol ex BTC returns all data on a speffic coin
+* /page/:coin  must seach by symbol ex BTC returns all data on a specific coin
 * /history/:coin Returns all history on a coin
 * /history/1day/:coin returns 1 day of price history for a given coin
 * /history/7day/:coin returns 7 days of price history for a given coin
