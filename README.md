@@ -3,25 +3,217 @@ API tools and documentation
 
 * [Command line tools](https://github.com/sebs/capcoin)
 
-## Main Map
+## REST URLs
 
-* /coins  Array of all supported coins
-* /coins/xcp Array of all supported XCP assets
-* /coins/xcp/all Array all XCP assets known
-* /map  JSON object of Coin symbols/names and known aliases
-* /front Front Page Data of current coin stats
-* /front/xcp Front Page Data of just XCP assets
-* /global Global data
-* /page/:coin  must seach by symbol ex BTC returns all data on a specific coin
-* /history/:coin Returns all history on a coin
-* /history/1day/:coin returns 1 day of price history for a given coin
-* /history/7day/:coin returns 7 days of price history for a given coin
-* /history/30day/:coin returns 30 days day of price history for a given coin
-* /history/90day/:coin returns 90 days of price history for a given coin
-* /history/180day/:coin returns 180 days of price history for a given coin
-* /history/365day/:coin returns a years of price history for a given coin
+#### /coins  
+- Description: Array of all supported coins
+- URL: http://coincap.io/coins
+- Response: 
+    ```JSON
+    ["300", "611", "808", "888", "INPAY", "XNG", "ARGUS", "DBIX", "DAR", "HMQ"]
+    ```
 
-## Socket API
+#### /map  
+- Description: JSON object of Coin symbols/names and known aliases
+- URL: http://coincap.io/map
+- Response: 
+    ```JSON
+    [
+        {
+            "aliases": [],
+            "name": "300 Token",
+            "symbol": "300"
+        },
+        {
+            "aliases": [],
+            "name": "SixEleven",
+            "symbol": "611"
+        },
+        {
+            "aliases": [],
+            "name": "808Coin",
+            "symbol": "808"
+        }
+    ]
+     ```
+
+#### /front 
+- Description: Front Page Data of current coin stats
+- URL: http://coincap.io/front
+- Response:
+    ```JSON
+    [
+        {
+            "cap24hrChange": -6.05,
+            "long": "Bitcoin",
+            "mktcap": 65173805891.25,
+            "perc": -6.05,
+            "price": 3934.85,
+            "shapeshift": true,
+            "short": "BTC",
+            "supply": 16563225,
+            "usdVolume": 2337600000,
+            "volume": 2337600000,
+            "vwapData": 3997.5639538606733,
+            "vwapDataBTC": 3997.5639538606733
+        },
+        {
+            "cap24hrChange": -6.59,
+            "long": "Ethereum",
+            "mktcap": 26016428866.32,
+            "perc": -6.59,
+            "price": 275.02,
+            "shapeshift": true,
+            "short": "ETH",
+            "supply": 94598316,
+            "usdVolume": 945732000,
+            "volume": 945732000,
+            "vwapData": 278.03921067242516,
+            "vwapDataBTC": 278.03921067242516
+        }
+    ]
+    ```
+
+#### /front/xcp 
+- Description: Front Page Data of just XCP assets
+- URL: http://coincap.io/front/
+- Response:
+    ```JSON
+    [
+        {
+            "cap24hrChange": -6.15,
+            "long": "FoldingCoin",
+            "mktcap": 5935774.813473665,
+            "perc": -6.15,
+            "price": 0.01131307434929704,
+            "shapeshift": false,
+            "short": "FLDC",
+            "supply": 524682737,
+            "usdVolume": 368149,
+            "volume": 368149,
+            "vwapData": 0.01131307434929704,
+            "vwapDataBTC": 0.01131307434929704
+        }
+    ]
+    ```
+
+#### /global 
+- Description: Global data
+- URL: http://coincap.io/global
+- Response:
+    ```JSON
+    {
+        "altCap": 70056946653.0021,
+        "bitnodesCount": 9350,
+        "btcCap": 65003614189.66167,
+        "btcPrice": 3924.57472440673,
+        "dom": 69.48,
+        "totalCap": 135060560842.66382,
+        "volumeAlt": 578834063.4608318,
+        "volumeBtc": 1317521389.0430577,
+        "volumeTotal": 1896355452.5038888
+    }
+    ```
+
+#### /page/:coin  
+- Description: must seach by symbol ex BTC returns all data on a specific coin
+- URL: http://coincap.io/page/ETC
+    ```JSON
+    {
+        "altCap": 70977893975.02808,
+        "bitnodesCount": 9350,
+        "btcCap": 65149292318.25,
+        "btcPrice": 3933.37,
+        "dom": 69.49,
+        "totalCap": 136127186293.27805,
+        "volumeAlt": 579507047.7508223,
+        "volumeBtc": 1319701715.2883158,
+        "volumeTotal": 1899208763.0391374,
+        "id": "ETC",
+        "_id": "c2f0fa55-495c-41e2-ad77-c66545b6d584",
+        "cap24hrChange": -2.45,
+        "display_name": "Ethereum Classic",
+        "status": "available",
+        "supply": 95478079,
+        "volume": 106044000,
+        "vwap_h24": 14.584250499041465,
+        "price_btc": 0.003659301940567121,
+        "price_eth": 0.052350773626971485,
+        "price_eur": 12.076,
+        "price_usd": 14.334776791590517,
+        "price_ltc": 0.2325328883760402,
+        "price_zec": 0.06845529547566803,
+        "market_cap": 1368656950.954846,
+        "type": "cmc",
+        "price": 14.1888
+    }
+    ```
+
+#### /history/:coin 
+- Description: Returns all history on a coin
+- URL: http://coincap.io/history/BTC
+- Response: 
+    ```JSON
+    {
+        "market_cap": [
+            [
+                1504664370000,  // unix time (24 hr intervals)
+                74300994770     // market cap
+            ],
+            [
+                1504750775000,
+                74594182198
+            ]
+        ],
+        "price" : [
+            [
+                1504750775000,  // unix time
+                4507.45         // price
+            ],
+            [
+                1504839280000,
+                4599.26
+            ]
+        ],
+        "volume": {
+            [
+                1504750775000,  // unix time
+                2095800000      // volume
+            ],
+            [
+                1504839280000,
+                1752760000
+            ]
+        }
+    }
+    ```
+
+#### /history/1day/:coin 
+- Description: Returns 1 day of price history for a given coin
+- URL: http://coincap.io/history/1day/BTC
+
+#### /history/7day/:coin 
+- Description: Returns 7 days of price history for a given coin
+- URL: http://coincap.io/history/7day/BTC
+
+#### /history/30day/:coin 
+- Description: Returns 30 days day of price history for a given coin
+- URL: http://coincap.io/history/30day/BTC
+
+#### /history/90day/:coin 
+- Description: Returns 90 days of price history for a given coin
+- URL: http://coincap.io/history/90day/DOGE
+
+#### /history/180day/:coin 
+- Description: Returns 180 days of price history for a given coin
+- URL: http://coincap.io/history/180day/BTC
+
+
+#### /history/365day/:coin 
+- Description: Returns a years of price history for a given coin
+- URL: http://coincap.io/history/365day/BTC
+
+### Socket API
     http://socket.coincap.io
 
 
@@ -31,106 +223,62 @@ You can find the 0.9.16 client on github
 [https://github.com/automattic/socket.io-client/tree/0.9](https://github.com/automattic/socket.io-client/tree/0.9)
 
 
-[Sample code attached](https://github.com/CoinCapDev/CoinCap/blob/master/subscribe.js)
+[Sample code attached](https://github.com/CoinCapDev/CoinCap/blob/master/subscribe.html)
 
-### responses
+#### Socket Response
 ```JSON
-// Example Trade message
 {
-    "message": {
-        "coin": "BTC",
-        "msg": {
-            "position24": "1",
-            "position": "1",
-            "short": "BTC",
-            "long": "Bitcoin",
-            "time": 1434566319464,
-            "price": 251.55,
-            "perc": "1.89",
-            "volume": "46021300",
-            "usdVolume": "46021300",
-            "cap24hrChange": "1.89",
-            "mktcap": 3593077312.5,
-            "supply": "14283750",
-            "published": false
-        }
-    }
+	"coin": "XMR",
+	"exchange_id": "bittrex",
+	"market_id": "ETH_XMR",
+	"message": {
+		"coin": "XMR",
+		"msg": {
+			"cap24hrChange": -6.96,
+			"long": "Monero",
+			"mktcap": 1581966162.9998832,
+			"perc": -6.96,
+			"price": 113.18142493836066,
+			"shapeshift": true,
+			"short": "XMR",
+			"supply": 15074975,
+			"usdVolume": 46837300,
+			"volume": 46837300,
+			"vwapData": 109.52716734604815,
+			"vwapDataBTC": 109.52716734604815
+		}
+	},
+	"msg": {
+		"cap24hrChange": -6.96,
+		"long": "Monero",
+		"mktcap": 1581966162.9998832,
+		"perc": -6.96,
+		"price": 113.18142493836066,
+		"shapeshift": true,
+		"short": "XMR",
+		"supply": 15074975,
+		"usdVolume": 46837300,
+		"volume": 46837300,
+		"vwapData": 109.52716734604815,
+		"vwapDataBTC": 109.52716734604815
+	},
+	"trade": {
+		"data": {
+			"exchange_id": "bittrex",
+			"market_id": "ETH_XMR",
+			"price": 2.468629520079166,
+			"raw": {
+				"Id": 3215419,
+				"TimeStamp": "2017-09-13T16:38:47.517",
+				"Quantity": 0.00256571,
+				"Price": 0.40508306,
+				"Total": 0.00103932,
+				"FillType": "PARTIAL_FILL",
+				"OrderType": "SELL"
+			},
+			"timestamp_ms": 1505320759600,
+			"volume": 0.0010393256578726
+		}
+	}
 }
-
-//Example Global Message
-{
-    "message": {
-        "btcPrice": "251.445",
-        "btcCap": "3591577518.75",
-        "altCap": 657169699,
-        "dom": 85,
-        "bitnodesCount": "6216"
-    }
-}
-```
-
-
-
-## Coins Call
-    http://www.coincap.io/coins
-
-###   response
-```JSON
-["XCP","PRO","NXTI","NIRO","VCOIN","ADN","DTC","EMC","EGMA","DRZ","SIGU","IEC","007","CZR","SLING","TWIST","GUA","SOL","BAT","XPL","XCO","HEX","RT2","HIRO","KRN","CCC","BTX","SPHR","OSC","XMS","ROS","XTP","TEETH","SHELL","BCF","ANI","BUB","SLFI","486","BTC","LTC","NXT","PPC","DOGE","NMC","XRP","QRK","DGC","BTCD","LXC","XMR","SDC","XC","AUR","PTS","DVC","MINT","MGW","NAS","SFR","ZET","VIA","FTC","XPM","VRC","GML","IFC","VTC","XCR","QORA","MAX","ZCC","WDC","YBC","NXTTY","FRSH","XCN","BTB","PRT","TIX","RED","NET","EXC","CANN","BCN","MSC","MONA","STR","RDD","NVC","XDN","POT","SYS","CLOAK","IXC","SYNC","JLH","BILS","ANC","SDC","KARM","PND","NOTE","BBR","RZR","RZR","URO","UNO","NAUT","GLD","HYPER","NLG","XDP","DGB","JPC","NBT","NODE","UNITY","EXCL","XTC","MAID","BURST","DEM","SWIFT","MRKT","DASH","BTS","BANX","XPY","ARCH","NSR","FAIR","XEM","GEMZ","SWARM","BLK","DEX","CLAM","CELL","START","ETC","SJCX","NXTV","PANGEA","FC2","BLOCK","10K","GRC","SKYNET","JINN","I0C","USDT","XBS","NAV","LIQUID","TRON","BAY","MEC","CRAVE","JAY","BITUSD","CURE","ZRC","SLR","DOGED","ZEIT","VNL","ATOMIC","UCI","CNMT","PRIVATEBET","DMD","HZ","BITCNY","MMNXT","UFO","BITBTC","NOO","BTM","BSTY","FCN","MMXIV","WBB","DRKC","LDOGE","BLC","MUE","METAL","YAC","KORE","SMAC","HLC","CON","BQC","MWC","QTL","RBBT","DSH","DTC","ENRG","MNE","KOBO","EMD","KUMA","LEAF","SMBR","NTRN","KEY","CC","MTR","COV","ACOIN","CIN","PSEUD","LOT","FRK","SPA","TIT","LGD","XCASH","U","GLIDE","WKC","JUDGE","DBL","CXC","ASN","LSD","ASC","MRC2","CKC","LOG","XJO","BRIT","BTG","WETK","CRAIG","NKT","EVENT","HRNXT","BUN","GHC","BITZ","TRK","VDO","LYC","GP","BVC","GSM","TRI","ARG","VMC","VIOR","GIZ","GRE","P7C","CF","JKC","OPALTKN","SOON","BTQ","TAK","BOOM","UIS","EAGS","42","DSB","SHIBE","CRT","ICASH","URC","COINO","RBT","BALLS","NXTCOINSCO","SF0","FIMK","MTC","NXTPRIVACY","DICE","RBR","ISR","ECC","CINNI","CCS","AC","MRCAM","TRUST","WATER","FLT","PINK","CBX","XAP","NTR","RIN","NXTSCO","GMC","PLUGIN","MED","DARK","OC","PMP","XCH","NXTI","BTCS","SONG","CAIX","SXC","SSD","XLB","TES","XWT","BITGOLD","GAIA","COMM","MIN","TTC","BCX","TRL","XBC","BLZ","CZC","DORCS","HAM","XPD","CRW","CTM","TOR","VOOT","ICB","SCSY","QSLV","LKY","COOL","TOP","ELC","GLC","CLR","PIGGY","THC","HVC","BUK","PLNC","HUC","GDC","KTK","OK","XDQ","APEX","XXX","SILK","SLM","CHA","SMC","UTIL","MEOW","SAT2","GCN","GB","GUE","NRS","ROOT","XSI","GIVE","NYC","PXC","ANAL","SBC","HAL","NKA","MRY","MNC","EXE","POP","KGC","RPC","ICN","DIEM","CAT","XGR","QCN","NMB","ZED","SHLD","SHA","FFC","GLYPH","MLS","FRAC","CDN","BET","OCTO","ALN","CRACK","AU","VGC","SHADE","KDC","STV","CAGE","AXR","BEAR","STK","ORO","SPT","XBOT","MCN","MRS","RIPO","HRL","YUM","SOLE","ZS","LTB","ULTC","CATC","BNCR","CHASH","XAU","CNL","GUN","LIMX","QB","GSX","BTCRY","PHO","NRB","PLC2","GAP","BEL","NTC","NEC","BOB","CGA","BEN","CND","VPN","APC","FIBRE","CACH","MZC","FLO","IOC","XAI","BLITZ","XST","JBS","HBN","OPAL","MOON","RBY","BOST","SMLY","UTC","HYP","FRC","HTML5","USDE","BITS","EAC","XWC","TEK","BLU","DEBUNE","FLAP","UNC","MARYJ","AM","MYR","C2","NOBL","LTBC","XMG","UNB","ABY","CCN","8BIT","CAP","RIC","TIPS","CASH","NEOS","TRC","CRYPT","EFL","BYC","SPR","TAG","DIME","NOXT","GEO","SUPER","AMBER","EMC2","PTC","OMC","MMC","CESC","ELT","EKN","VTA","FST","J","SLG","ARI","FLDC","SRC","DOPE","GRS","QBK","CSC","BITB","XQN","PHS","LTCD","CYP","COL","ORB","NYAN","XCPSCO","CAM","UNAT","TCO"]
-```
-
-
-
-## Map
-    http://www.coincap.io/map
-### response
-```JSON
-[{"name":"Counterparty","symbol":"XCP","aliases":["unknown","setme"]},...,...,...]
-```
-
-## Front
-    http://www.coincap.io/front
-###   response
-```JSON
-[{"position24":"1","position":"1","short":"BTC","long":"Bitcoin","time":1434562273127,"price":"251.42000000","perc":"5.98","volume":"48384700","usdVolume":"48384700","cap24hrChange":"5.98","mktcap":3590824438.5,"supply":"14282175","published":false},...,...,]
-```
-
-
-## Globals
-    http://www.coincap.io/global
-###   response
-```JSON
-{"btcPrice":250.12,"btcCap":3572257611,"altCap":630448767,"dom":18}
-```
-
-## Page call
-    http://www.coincap.io/page/:coin
-    Coin must be the coin symbole. ie Bitcoin is BTC
-    to view a list of correct symbols/names view the map call 
-
-###   response
-```JSON
-{"btcPrice":250.21,"btcCap":3573543006.75,"altCap":628974097,"dom":18,"short":"BTC","long":"Bitcoin","homeURL":"https://www.reddit.com/r/Bitcoin","explorerURL":"","twitter":"","discissionURL":"","mineable":true,"premined":false,"preminedSig":false,"position24":"1","position":"1","time":1434562499433,"price":[...*Array of Arrays (chart data)*],"perc":"5.98","volume":"48384700","usdVolume":"48384700","cap24hrChange":"5.98","mktcap":3573543006.75,"supply":"14282175","published":false,"usdPrice":250.21,"market_cap":[...*Array of Arrays (chart data)*]}
-```
-
-
-## History
-    http://www.coincap.io/history/*Timeframe*/BTC
-    
-    Timeframes supported
-    
-    * /history/1day/ 
-    * /history/7day/ 
-    * /history/30day/ 
-    * /history/90day/
-    * /history/180day/ 
-    * /history/365day/
-
-    Timeframe is optional
-    /history/:coin will return all data
-
-###   response
-    JSON Object
-```
-{"market_cap":[*Array of Arrays (chart data)*],"price":[*Array of Arrays (chart data)*]}
 ```
