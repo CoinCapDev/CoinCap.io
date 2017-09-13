@@ -157,7 +157,7 @@ API tools and documentation
     {
         "market_cap": [
             [
-                1504664370000,  // unix time (24 hr intervals)
+                1504664370000,  // unix time (milliseconds)
                 74300994770     // market cap
             ],
             [
@@ -167,8 +167,8 @@ API tools and documentation
         ],
         "price" : [
             [
-                1504750775000,  // unix time
-                4507.45         // price
+                1504750775000,
+                4507.45 
             ],
             [
                 1504839280000,
@@ -177,8 +177,8 @@ API tools and documentation
         ],
         "volume": {
             [
-                1504750775000,  // unix time
-                2095800000      // volume
+                1504750775000,  
+                2095800000   
             ],
             [
                 1504839280000,
