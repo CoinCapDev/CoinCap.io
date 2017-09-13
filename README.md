@@ -153,7 +153,7 @@ API tools and documentation
 - Description: Returns all history on a coin
 - URL: http://coincap.io/history/BTC
 - Response: 
-    ```JSON
+    ```javascript
     {
         "market_cap": [
             [
