@@ -175,7 +175,7 @@ API tools and documentation
                 4599.26
             ]
         ],
-        "volume": {
+        "volume": [
             [
                 1504750775000,  
                 2095800000   
@@ -184,7 +184,7 @@ API tools and documentation
                 1504839280000,
                 1752760000
             ]
-        }
+        ]
     }
     ```
 
