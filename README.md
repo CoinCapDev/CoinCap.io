@@ -74,29 +74,6 @@ API tools and documentation
     ]
     ```
 
-#### /front/xcp 
-- Description: Front Page Data of just XCP assets
-- URL: http://coincap.io/front/
-- Response:
-    ```JSON
-    [
-        {
-            "cap24hrChange": -6.15,
-            "long": "FoldingCoin",
-            "mktcap": 5935774.813473665,
-            "perc": -6.15,
-            "price": 0.01131307434929704,
-            "shapeshift": false,
-            "short": "FLDC",
-            "supply": 524682737,
-            "usdVolume": 368149,
-            "volume": 368149,
-            "vwapData": 0.01131307434929704,
-            "vwapDataBTC": 0.01131307434929704
-        }
-    ]
-    ```
-
 #### /global 
 - Description: Global data
 - URL: http://coincap.io/global
