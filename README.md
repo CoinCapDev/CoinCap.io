@@ -191,7 +191,7 @@ API tools and documentation
 - URL: http://coincap.io/history/365day/BTC
 
 ### Socket API
-    http://socket.coincap.io
+    https://coincap.io
 
 
 To connect to CoinCap WebSockets you must use socket.io-client 0.9.16 or another
