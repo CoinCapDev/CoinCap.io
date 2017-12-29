@@ -194,10 +194,8 @@ API tools and documentation
     https://coincap.io
 
 
-To connect to CoinCap WebSockets you must use socket.io-client 0.9.16 or another
+To connect to CoinCap WebSockets you must use socket.io-client 1.4.6 or another
 websocket client compatiable with that version of Socket.io
-You can find the 0.9.16 client on github
-[https://github.com/automattic/socket.io-client/tree/0.9](https://github.com/automattic/socket.io-client/tree/0.9)
 
 
 [Sample code attached](https://github.com/CoinCapDev/CoinCap/blob/master/subscribe.html)
@@ -238,24 +236,6 @@ You can find the 0.9.16 client on github
 		"volume": 46837300,
 		"vwapData": 109.52716734604815,
 		"vwapDataBTC": 109.52716734604815
-	},
-	"trade": {
-		"data": {
-			"exchange_id": "bittrex",
-			"market_id": "ETH_XMR",
-			"price": 2.468629520079166,
-			"raw": {
-				"Id": 3215419,
-				"TimeStamp": "2017-09-13T16:38:47.517",
-				"Quantity": 0.00256571,
-				"Price": 0.40508306,
-				"Total": 0.00103932,
-				"FillType": "PARTIAL_FILL",
-				"OrderType": "SELL"
-			},
-			"timestamp_ms": 1505320759600,
-			"volume": 0.0010393256578726
-		}
 	}
 }
 ```
