@@ -194,10 +194,8 @@ API tools and documentation
     https://coincap.io
 
 
-To connect to CoinCap WebSockets you must use socket.io-client 0.9.16 or another
+To connect to CoinCap WebSockets you must use socket.io-client 1.4.6 or another
 websocket client compatiable with that version of Socket.io
-You can find the 0.9.16 client on github
-[https://github.com/automattic/socket.io-client/tree/0.9](https://github.com/automattic/socket.io-client/tree/0.9)
 
 
 [Sample code attached](https://github.com/CoinCapDev/CoinCap/blob/master/subscribe.html)
