@@ -93,7 +93,7 @@ API tools and documentation
     ```
 
 #### /page/:coin  
-- Description: must seach by symbol ex BTC returns all data on a specific coin
+- Description: must search by symbol ex BTC returns all data on a specific coin
 - URL: http://coincap.io/page/ETC
     ```JSON
     {
