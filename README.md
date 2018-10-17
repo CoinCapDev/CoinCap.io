@@ -1,4 +1,7 @@
 # CoinCap.io
+
+## This API is deprecated. Please refer to https://docs.coincap.io/
+
 API tools and documentation
 
 * [Command line tools](https://github.com/sebs/capcoin)
