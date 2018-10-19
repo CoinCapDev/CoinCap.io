@@ -1,7 +1,8 @@
 # CoinCap.io
-API tools and documentation
 
-* [Command line tools](https://github.com/sebs/capcoin)
+## This API is deprecated. Please refer to https://docs.coincap.io/
+
+---
 
 ## REST URLs
 
