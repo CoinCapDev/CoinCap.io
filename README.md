@@ -1,6 +1,6 @@
 # CoinCap.io
 
-## This API is deprecated. Please refer to https://docs.coincap.io/
+## This API will continue to operate as it has, but will be shut down on March 1, 2019. Our new API is: https://docs.coincap.io/
 
 ---
 
