@@ -1,7 +1,8 @@
 # CoinCap.io
-API tools and documentation
 
-* [Command line tools](https://github.com/sebs/capcoin)
+## This API will continue to operate as it has, but will be shut down on March 1, 2019. Our new API is: https://docs.coincap.io/
+
+---
 
 ## REST URLs
 
